@@ -81,8 +81,8 @@ such as cygwin, WSL, Homebrew, ...
 1. it first blindly copy all of NR (the new release) files and directories upon ID (your copy of the installed wiki directory), except for:
   - `bin/configure`
   - `lib/LocalSite.cfg`
-  - `data/`
-  it just copies over, it does not remove anything.
+  - `data/`\
+  it just copies over files, it does not remove anything.
 1. in `data/`, it overwrites any topic that has not been edited locally, that is topics with the `%META:TOPICINFO{author=` metadata still being `"ProjectContributor"`
 1. then it merges all these edited topic files, and `bin/configure` and `lib/LocalSite.cfg`\
   Merging is done as much automatically if possible (if using the default merge), and prompts for an interactive merging only when faced with conflicting merges.
