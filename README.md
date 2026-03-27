@@ -1,6 +1,6 @@
 # foswiki-upgrade
 
-A linux bash script to upgrade modern [Foswiki](https://foswiki.org/) installations
+A linux bash script to upgrade modern [Foswiki](https://foswiki.org/) installations not using the [Foswiki git repository](https://foswiki.org/Development/GitRepository).
 
 Usage:
 
@@ -67,7 +67,7 @@ The script however will not overwrite blindly any topic file that has been
 edited via Foswiki itself, by checking the author metadata. It will perform a
 3-way merge, as automated as possible.
 
-This blind copy is necessary because Foswiki does not properly manage plugins, do to legacy reasons: plugin and contrib files are mixed with distributed files can be updated at any time, so an update process is not able to determin if a plugin file local change is due to a normal plugin update via the bin/configure system, of by deploying the plugin by hand, or by editing it locally by hand. But in modern wiki, this is compensated by the fact that Plugins and Contribs are now designed to never require editing their files to customize them. So we can blindly overwrite them if theyr are included a new Foswiki release..
+This blind copy is necessary because Foswiki does not properly manage plugins, do to legacy reasons: plugin and contrib files are mixed with distributed files can be updated at any time, so an update process is not able to determin if a plugin file local change is due to a normal plugin update via the bin/configure system, of by deploying the plugin by hand, or by editing it locally by hand. But in modern wiki, this is compensated by the fact that Plugins and Contribs are now designed to never require editing their files to customize them. So we can blindly overwrite them if they are included a new Foswiki release..
 
 It also works only on a local copy of the site. You will have to download
 yourself a copy of your site, upgrade, and then re-upload it in place.
