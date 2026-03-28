@@ -4,6 +4,8 @@ A linux bash script to upgrade modern [Foswiki](https://foswiki.org/) installati
 
 **Note:** The upgrade process must be on a linux-like system, but your Foswiki installation can be on any server. For instance, if your foswiki is running on a Windows or MacOS server, just copy its directory on a linux machine and run foswiki-update there, and re-copy back onto your server afterwards.
 
+See also a [reminder of the standard upgrade method](https://foswiki.org/Support/BestPracticeTip35#comment1.1774606339) which should work for most people. I made my script to have a bit more control in case of upgrade conflicts, as my installation is quite customized.
+
 Usage:
 
 `foswiki-upgrade [options] install_dir old_release new_release`
